@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "774852573726",
+    "project_id": "loginscreen-6b200",
+    "storage_bucket": "loginscreen-6b200.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774852573726:android:e499f915695ddb65044c0f",
+        "android_client_info": {
+          "package_name": "com.techcomputerworld.loginscreenfirestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHZIfvnI9lCn5U8wcSEDjm3nhp_lAQAYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
