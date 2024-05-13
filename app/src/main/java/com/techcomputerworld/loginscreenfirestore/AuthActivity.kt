@@ -95,7 +95,7 @@ class AuthActivity : AppCompatActivity() {
         useremail = email
         providerSession = provider
         val homeIntent = Intent(this, HomeActivity :: class.java)
-        startActivity(intent)
+        startActivity(homeIntent)
     }
     private fun register() {
         etEmail = findViewById(R.id.emailEditText)
