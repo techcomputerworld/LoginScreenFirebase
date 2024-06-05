@@ -1,24 +1,23 @@
-# ChatGPT Android App
+# Login Screen Firebase
 
-Este proyecto es una aplicación de chat que utiliza el modelo de lenguaje ChatGPT de OpenAI para generar respuestas. Los usuarios pueden interactuar con un modelo de inteligencia artificial a través de esta aplicación.
+Login Screen Firebase es un ejemplo de como hacer una pantalla de login y de registro que use Firestore
 
 ## Características
 
-Chat con un modelo de lenguaje: Los usuarios pueden enviar mensajes y recibir respuestas generadas por el modelo ChatGPT.
-Interfaz simple y amigable: La aplicación tiene una interfaz fácil de usar para una experiencia fluida.
-Requisitos
-Para ejecutar esta aplicación, necesitas:
+Ejemplo de pantalla de login  para usarlo enb cualquier proyecto donde quieras emplementar Firebase
+Esta sin terminar y no conecta con Firestore
 
-Una clave de API de OpenAI.
-Android Studio o cualquier otro entorno de desarrollo de Android.
-Un dispositivo o emulador con Android 4.4 o superior.
-Configuración
-Clona este repositorio o descarga el código fuente.
-Abre el proyecto en Android Studio.
-Reemplaza YOUR_API_KEY en el archivo MainActivity.java con tu propia clave de API de OpenAI.
-Compila y ejecuta la aplicación en un dispositivo Android o emulador.
-Contribuciones
-Si deseas contribuir a este proyecto, ¡siéntete libre de crear una solicitud de extracción! Agradecemos cualquier contribución.
+Ya mismo lo tendre funcionando 😊
 
-Recuerda personalizar este README según las características específicas de tu aplicación y proporcionar instrucciones claras para los usuarios. ¡Buena suerte con tu desarrollo! 😊
+# English
 
+# Login Screen Firebase 
+
+Login Screen Firebase is an example of how to make a login and registration screen that uses Firestore
+
+## Characteristics
+
+Example of a login screen to use in any project where you want to implement Firebase
+It is unfinished and does not connect to Firestore
+
+I'll have it working right now 😊gi

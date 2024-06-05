@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HelpChatGPT</string>
+    <string name="app">HelpChatGPT!</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="forgotPassword">¿Olvidaste tu contraseña?</string>
+    <string name="resetPassword">Enviar contraseña</string>
+    <string name="acept">He leido y acepto los</string>
+    <string name="terms">terminos y condiciones de uso.</string>
+    <string name="empty_email"></string>
+    <string name="email">Email</string>
+    <string name="invalid_email">mmm me parece que el email esta mal escrito</string>
+    <string name="reset_password">Enviar contraseña</string>
+
+    <string name="google">GOOGLE</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="errorregister">error something has gone wrong</string>
 </resources>

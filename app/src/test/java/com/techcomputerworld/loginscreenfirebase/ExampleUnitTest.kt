@@ -1,4 +1,4 @@
-package com.techcomputerworld.helpchatgpt
+package com.techcomputerworld.loginscreenfirebase
 
 import org.junit.Test
 
