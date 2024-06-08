@@ -63,7 +63,23 @@ class AuthActivity : AppCompatActivity() {
         bundle.putString("message", "Complete Firebase integration")
         analytics.logEvent("Initscreen", bundle)
 
+        manageButtonLogin()
+        etEmail.doOnTextChanged{text, start, before, count -> manageButtonLogin() }
+        etPassword.doOnTextChanged{text, start, before, count -> manageButtonPass() }
 
+    }
+    public override fun onStart() {
+        super.onStart()
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            goHome(currentUser.email.toString(), currentUser.providerId)
+        }
+    }
+    override fun onBackPressed() {
+        val startmain = Intent(Intent.ACTION_MAIN)
+        startmain.addCategory(Intent.CATEGORY_HOME)
+        startmain.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(startmain)
     }
     fun login(view: View ) {
         loginUser()
@@ -142,6 +158,33 @@ class AuthActivity : AppCompatActivity() {
         }
         startActivity(homeIntent)
     }
+    private fun resetPassword() {
+        var email = etEmail.text.toString()
+        if (!TextUtils.isEmpty(email)) {
+            auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener { task -> 
+                    if (task.isSuccessful) Toast.makeText(this, "Email sent to $email", Toast.LENGTH_SHORT).show()
+                    else Toast.makeText(this, "The user with this email was not found", Toast.LENGTH_SHORT).show()
+                }
+        }
+        else Toast.makeText(this, "enter a valid email", Toast.LENGTH_SHORT).show()
+    }
+    private fun manageButtonLogin() {
+        //posibilidad de activar o desactivar el boton login
+        val btLogin = findViewById<Button>(R.id.loginButton)
 
-
+        //obtener texto de los EditText
+        email = etEmail.text.toString()
+        password = etPassword.text.toString()
+        Log.d("manageButtonLogin", "Email: $email")
+        Log.d("manageButtonLogin", "Password: $password")
+        //validar y actualizar el estado del boton
+        if (TextUtils.isEmpty(password) || !ValidateEmail.isEmail(email)) {
+            btLogin.setBackgroundColor(ContextCompat.getColor(this,  R.color.gray))
+            btLogin.isEnabled = false
+        } else {
+            btLogin.setBackgroundColor(ContextCompat.getColor(this,  R.color.teal_700))
+            btLogin.isEnabled = true
+        }
+    }
 }
